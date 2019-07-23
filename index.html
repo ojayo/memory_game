@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Memory Game by Jay Osborne</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+	<div class="container">
+
+		<div class="info-box">
+			<div id="title-box">
+				<h1>ひらがな Kana-Kana <span id="subtitle"><a href="https://en.wikipedia.org/wiki/Hiragana">Hiragana</a></span></h1>
+			</div>
+			<div id="score-box">
+				<p id="lowestScore">Record Low: <span id="lowestScoreDisplay">97<!--later: pull this from outside file --></span></p>
+				<p id="score"><span id="scoreDisplay"></span></p>
+			</div>
+		</div>
+
+		<div class="card-box">
+			<div class="card" data-kana="a">
+				<img class="front" src="./images/a.png" alt="a">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="a">
+				<img class="front" src="./images/a.png" alt="a">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="i">
+				<img class="front" src="./images/i.png" alt="i">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="i">
+				<img class="front" src="./images/i.png" alt="i">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="e">
+				<img class="front" src="./images/e.png" alt="e">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="e">
+				<img class="front" src="./images/e.png" alt="e">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="o">
+				<img class="front" src="./images/o.png" alt="o">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="o">
+				<img class="front" src="./images/o.png" alt="o">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="u">
+				<img class="front" src="./images/u.png" alt="u">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="u">
+				<img class="front" src="./images/u.png" alt="u">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="ka">
+				<img class="front" src="./images/ka.png" alt="ka">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ka">
+				<img class="front" src="./images/ka.png" alt="ka">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ki">
+				<img class="front" src="./images/ki.png" alt="ki">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ki">
+				<img class="front" src="./images/ki.png" alt="ki">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ke">
+				<img class="front" src="./images/ke.png" alt="ke">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ke">
+				<img class="front" src="./images/ke.png" alt="ke">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ko">
+				<img class="front" src="./images/ko.png" alt="ko">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="ko">
+				<img class="front" src="./images/ko.png" alt="ko">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ku">
+				<img class="front" src="./images/ku.png" alt="ku">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ku">
+				<img class="front" src="./images/ku.png" alt="ku">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="sa">
+				<img class="front" src="./images/sa.png" alt="sa">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="sa">
+				<img class="front" src="./images/sa.png" alt="sa">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="shi">
+				<img class="front" src="./images/shi.png" alt="shi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="shi">
+				<img class="front" src="./images/shi.png" alt="shi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="se">
+				<img class="front" src="./images/se.png" alt="se">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="se">
+				<img class="front" src="./images/se.png" alt="se">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="so">
+				<img class="front" src="./images/so.png" alt="so">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="so">
+				<img class="front" src="./images/so.png" alt="so">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="su">
+				<img class="front" src="./images/su.png" alt="su">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="su">
+				<img class="front" src="./images/su.png" alt="su">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="ta">
+				<img class="front" src="./images/ta.png" alt="ta">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ta">
+				<img class="front" src="./images/ta.png" alt="ta">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="chi">
+				<img class="front" src="./images/chi.png" alt="chi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="chi">
+				<img class="front" src="./images/chi.png" alt="chi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="te">
+				<img class="front" src="./images/te.png" alt="te">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="te">
+				<img class="front" src="./images/te.png" alt="te">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="to">
+				<img class="front" src="./images/to.png" alt="to">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="to">
+				<img class="front" src="./images/to.png" alt="to">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="tsu">
+				<img class="front" src="./images/tsu.png" alt="tsu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="tsu">
+				<img class="front" src="./images/tsu.png" alt="tsu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="na">
+				<img class="front" src="./images/na.png" alt="na">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="na">
+				<img class="front" src="./images/na.png" alt="na">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ni">
+				<img class="front" src="./images/ni.png" alt="ni">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ni">
+				<img class="front" src="./images/ni.png" alt="ni">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ne">
+				<img class="front" src="./images/ne.png" alt="ne">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ne">
+				<img class="front" src="./images/ne.png" alt="ne">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="no">
+				<img class="front" src="./images/no.png" alt="no">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="no">
+				<img class="front" src="./images/no.png" alt="no">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="nu">
+				<img class="front" src="./images/nu.png" alt="nu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="nu">
+				<img class="front" src="./images/nu.png" alt="nu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="ha">
+				<img class="front" src="./images/ha.png" alt="ha">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ha">
+				<img class="front" src="./images/ha.png" alt="ha">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="hi">
+				<img class="front" src="./images/hi.png" alt="hi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="hi">
+				<img class="front" src="./images/hi.png" alt="hi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="he">
+				<img class="front" src="./images/he.png" alt="he">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="he">
+				<img class="front" src="./images/he.png" alt="he">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ho">
+				<img class="front" src="./images/ho.png" alt="ho">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="ho">
+				<img class="front" src="./images/ho.png" alt="ho">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="fu">
+				<img class="front" src="./images/fu.png" alt="fu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="fu">
+				<img class="front" src="./images/fu.png" alt="fu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="ma">
+				<img class="front" src="./images/ma.png" alt="ma">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ma">
+				<img class="front" src="./images/ma.png" alt="ma">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="mi">
+				<img class="front" src="./images/mi.png" alt="mi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="mi">
+				<img class="front" src="./images/mi.png" alt="mi">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="me">
+				<img class="front" src="./images/me.png" alt="me">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="me">
+				<img class="front" src="./images/me.png" alt="me">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="mo">
+				<img class="front" src="./images/mo.png" alt="mo">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="mo">
+				<img class="front" src="./images/mo.png" alt="mo">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="mu">
+				<img class="front" src="./images/mu.png" alt="mu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="mu">
+				<img class="front" src="./images/mu.png" alt="mu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="ra">
+				<img class="front" src="./images/ra.png" alt="ra">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ra">
+				<img class="front" src="./images/ra.png" alt="ra">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ri">
+				<img class="front" src="./images/ri.png" alt="ri">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ri">
+				<img class="front" src="./images/ri.png" alt="ri">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="re">
+				<img class="front" src="./images/re.png" alt="re">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="re">
+				<img class="front" src="./images/re.png" alt="re">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ro">
+				<img class="front" src="./images/ro.png" alt="ro">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="ro">
+				<img class="front" src="./images/ro.png" alt="ro">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ru">
+				<img class="front" src="./images/ru.png" alt="ru">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ru">
+				<img class="front" src="./images/ru.png" alt="ru">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<!-- to maintain a nice 9x10 grid, I will omit the "n" kana 
+				    ( It looks like an "n", anyways. ) -->
+
+			<div class="card" data-kana="wa">
+				<img class="front" src="./images/wa.png" alt="wa">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="wa">
+				<img class="front" src="./images/wa.png" alt="wa">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="wo">
+				<img class="front" src="./images/wo.png" alt="wo">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="wo">
+				<img class="front" src="./images/wo.png" alt="wo">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+			<div class="card" data-kana="ya">
+				<img class="front" src="./images/ya.png" alt="ya">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="ya">
+				<img class="front" src="./images/ya.png" alt="ya">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="yo">
+				<img class="front" src="./images/yo.png" alt="yo">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>		
+			<div class="card" data-kana="yo">
+				<img class="front" src="./images/yo.png" alt="yo">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="yu">
+				<img class="front" src="./images/yu.png" alt="yu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+			<div class="card" data-kana="yu">
+				<img class="front" src="./images/yu.png" alt="yu">
+				<img class="back" src="./images/back.png" alt="backface">
+			</div>
+
+<!-- Can I write some javascript code that automatically creates these divs? All I would need is an array of the 45 kana sounds, like ["ka", "ki", "ke", "ko", "ku"] -->
+
+		</div>
+		<p id="signature">A Memory Game by Jay Osborne</p>	
+	</div>
+
+	<script src="./scripts.js"></script>
+</body>
+</html>
